@@ -3,7 +3,7 @@
 * Vektor
 * Raster(bitmap)
 
-<img src="">
+<img src="https://github.com/rasitesdmr/Graphics-Programming/blob/master/zetcode/Introduction/image/vr1.png">
 
 ## Vektor ?
 
