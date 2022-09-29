@@ -1,11 +1,11 @@
-# İki Farklı Bilgisayar Grafiği Vardır ?
+# 🎯 İki Farklı Bilgisayar Grafiği Vardır ?
 
 * Vektor
 * Raster(bitmap)
 
 <img src="https://github.com/rasitesdmr/Graphics-Programming/blob/master/zetcode/Introduction/image/vr1.png">
 
-## Vektor ?
+## 📌 Vektor ?
 
 * Vektör dosyaları, bir görüntü oluşturmak için ızgara üzerinde sabit noktalı matematiksel denklemler, çizgiler ve
   eğriler kullanır.
@@ -14,7 +14,7 @@
 * Matematiksel formül her boyutta yeniden kalibre edilebildiğinden, vektör görüntülerini kaliteden ödün vermeden yukarı
   veya aşağı ölçekleyebilirsiniz.
 
-## Raster(Bitmap) ?
+## 📌 Raster(Bitmap) ?
 
 * Raster dosyaları, piksellerden oluşturulan görüntülerdir. Pikseller, bir araya gelerek fotoğraf gibi çok ayrıntılı
   görüntüleri oluşturabilen çok büyük miktarda küçük renkli karelerdir.
