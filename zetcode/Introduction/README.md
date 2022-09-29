@@ -16,8 +16,9 @@
 
 ## 📌 Raster(Bitmap) ?
 
-* Raster dosyaları, piksellerden oluşturulan görüntülerdir. Pikseller, bir araya gelerek fotoğraf gibi çok ayrıntılı
-  görüntüleri oluşturabilen çok büyük miktarda küçük renkli karelerdir.
+* Raster dosyaları, piksellerden oluşturulan görüntülerdir.
+* Pikseller, bir araya gelerek fotoğraf gibi çok ayrıntılı görüntüleri oluşturabilen çok büyük miktarda
+  küçük renkli karelerdir.
 * Bir görüntünün piksel sayısı ne kadar fazla olursa görüntü kalitesi de o kadar yüksek olur.
 * Bir görüntüdeki piksel sayısı dosya türüne bağlıdır (örneğin; JPEG, GIF ya da PNG).
 
