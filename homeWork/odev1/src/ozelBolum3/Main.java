@@ -1,4 +1,4 @@
-package bolum3;
+package ozelBolum3;
 
 
 import javax.swing.*;
@@ -8,8 +8,6 @@ import java.awt.event.ActionListener;
 
 
 class CopAdam extends JPanel implements ActionListener {
-
-
     int copAdaminKafasiX = 0;
     int copAdaminKafasiY = 300;
     int copAdaminGovdesiX1 = 25;
@@ -33,17 +31,20 @@ class CopAdam extends JPanel implements ActionListener {
     int copAdaminKollari2X2 = 50;
     int copAdaminKollari2Y2 = 400;
 
+    int copAdaminGozuX = 37;
+
     int ayakKordinatiArtirmaX = 1;
 
     int gercekKordinatX;
 
 
     int xKordinatArtirmaMiktari = 1;
-    int delay = 30;
+    int delay = 10;
     Timer timer = new Timer(delay, this);
 
 
     public void copAdaminKafasi(Graphics graphics) {
+
 
         Graphics2D graphics2D = (Graphics2D) graphics;
 
@@ -66,7 +67,6 @@ class CopAdam extends JPanel implements ActionListener {
         graphics2D.setRenderingHints(renderingHints);
 
         graphics2D.drawLine(copAdaminGovdesiX1, copAdaminGovdesiY1, copAdaminGovdesiX2, copAdaminGovdesiY2);
-
 
     }
 
@@ -96,9 +96,22 @@ class CopAdam extends JPanel implements ActionListener {
         graphics2D.drawLine(copAdaminAyaklari1X1, copAdaminAyaklari1Y1, copAdaminAyaklari1X2, copAdaminAyaklari1Y2);
         graphics2D.drawLine(copAdaminAyaklari2X1, copAdaminAyaklari2Y1, copAdaminAyaklari2X2, copAdaminAyaklari2Y2);
 
-        timer.start();
+
     }
 
+    public void copAdaminGozu(Graphics graphics) {
+
+
+        Graphics2D graphics2D = (Graphics2D) graphics;
+
+        RenderingHints renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        renderingHints.put(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        graphics2D.setRenderingHints(renderingHints);
+
+        graphics2D.fillOval(copAdaminGozuX,320,8,8);
+
+        timer.start();
+    }
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -107,11 +120,11 @@ class CopAdam extends JPanel implements ActionListener {
         copAdaminGovdesi(g);
         copAdaminAyaklari(g);
         copAdaminKollari(g);
+        copAdaminGozu(g);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         if (copAdaminKafasiX == 534) {
             xKordinatArtirmaMiktari = 0;
         }
@@ -128,9 +141,12 @@ class CopAdam extends JPanel implements ActionListener {
         copAdaminAyaklari1X2 += xKordinatArtirmaMiktari;
         copAdaminAyaklari2X1 += xKordinatArtirmaMiktari;
         copAdaminAyaklari2X2 += xKordinatArtirmaMiktari;
-
+        copAdaminGozuX += xKordinatArtirmaMiktari;
 
         if (0 <= gercekKordinatX && gercekKordinatX <= 50) {
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
             copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
             gercekKordinatX++;
@@ -143,6 +159,9 @@ class CopAdam extends JPanel implements ActionListener {
 
         if (50 < gercekKordinatX && gercekKordinatX <= 100) {
 
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
+
             copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
             gercekKordinatX++;
@@ -153,6 +172,9 @@ class CopAdam extends JPanel implements ActionListener {
         }
 
         if (100 < gercekKordinatX && gercekKordinatX <= 150) {
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
             copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
             gercekKordinatX++;
@@ -165,6 +187,9 @@ class CopAdam extends JPanel implements ActionListener {
 
         if (150 < gercekKordinatX && gercekKordinatX <= 200) {
 
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
+
             copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
             gercekKordinatX++;
@@ -174,6 +199,9 @@ class CopAdam extends JPanel implements ActionListener {
             }
         }
         if (200 < gercekKordinatX && gercekKordinatX <= 250) {
+
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
 
             copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
@@ -185,6 +213,8 @@ class CopAdam extends JPanel implements ActionListener {
 
         }
         if (250 < gercekKordinatX && gercekKordinatX <= 300) {
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
 
             copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
@@ -196,6 +226,9 @@ class CopAdam extends JPanel implements ActionListener {
         }
         if (300 < gercekKordinatX && gercekKordinatX <= 350) {
 
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
             copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
             gercekKordinatX++;
@@ -206,6 +239,8 @@ class CopAdam extends JPanel implements ActionListener {
 
         }
         if (350 < gercekKordinatX && gercekKordinatX <= 400) {
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
 
             copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
@@ -216,6 +251,9 @@ class CopAdam extends JPanel implements ActionListener {
             }
         }
         if (400 < gercekKordinatX && gercekKordinatX <= 450) {
+
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
 
             copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
@@ -228,6 +266,9 @@ class CopAdam extends JPanel implements ActionListener {
         }
         if (450 < gercekKordinatX && gercekKordinatX <= 500) {
 
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
+
             copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
             gercekKordinatX++;
@@ -237,6 +278,8 @@ class CopAdam extends JPanel implements ActionListener {
             }
         }
         if (500 < gercekKordinatX && gercekKordinatX <= 530) {
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
 
             copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
             copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
@@ -244,6 +287,7 @@ class CopAdam extends JPanel implements ActionListener {
 
             if (gercekKordinatX == 530) {
                 System.out.println("11.Adım -) 500 ile 530 kordinatları arasında ");
+
 
             }
 
@@ -268,7 +312,8 @@ public class Main extends JFrame {
         setSize(600, 600);
         setVisible(true);
         setLocationRelativeTo(null);
-       setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //  setResizable(false); // boyutlandırmayı kapatıyor
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
