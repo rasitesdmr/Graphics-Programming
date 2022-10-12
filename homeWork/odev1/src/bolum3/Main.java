@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Logger;
 
 
 class CopAdam extends JPanel implements ActionListener {
@@ -30,11 +31,15 @@ class CopAdam extends JPanel implements ActionListener {
     int copAdaminKollari2X2 = 50;
     int copAdaminKollari2Y2 = 400;
 
+    int copAdaminGozuX = 37;
+
     int ayakKordinatiArtirmaX = 1;
+
+    int gercekKordinatX;
 
 
     int xKordinatArtirmaMiktari = 1;
-    int delay = 100;
+    int delay = 10;
     Timer timer = new Timer(delay, this);
 
 
@@ -96,6 +101,20 @@ class CopAdam extends JPanel implements ActionListener {
         timer.start();
     }
 
+    public void copAdaminGozu(Graphics graphics) {
+
+
+        Graphics2D graphics2D = (Graphics2D) graphics;
+
+        RenderingHints renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        renderingHints.put(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        graphics2D.setRenderingHints(renderingHints);
+
+       graphics2D.fillOval(copAdaminGozuX,320,8,8);
+
+        timer.start();
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -103,15 +122,17 @@ class CopAdam extends JPanel implements ActionListener {
         copAdaminGovdesi(g);
         copAdaminAyaklari(g);
         copAdaminKollari(g);
+        copAdaminGozu(g);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (copAdaminKafasiX == 836) {
+        if (copAdaminKafasiX == 534) {
             xKordinatArtirmaMiktari = 0;
         }
 
         copAdaminKafasiX += xKordinatArtirmaMiktari;
+        gercekKordinatX = copAdaminKafasiX;
         copAdaminGovdesiX1 += xKordinatArtirmaMiktari;
         copAdaminGovdesiX2 += xKordinatArtirmaMiktari;
         copAdaminKollari1X1 += xKordinatArtirmaMiktari;
@@ -122,11 +143,157 @@ class CopAdam extends JPanel implements ActionListener {
         copAdaminAyaklari1X2 += xKordinatArtirmaMiktari;
         copAdaminAyaklari2X1 += xKordinatArtirmaMiktari;
         copAdaminAyaklari2X2 += xKordinatArtirmaMiktari;
+        copAdaminGozuX += xKordinatArtirmaMiktari;
 
-        copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
-        copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
+        if (0 <= gercekKordinatX && gercekKordinatX <= 50) {
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 50) {
+                System.out.println("0 ile 50 kordinatları arasında cöp adam ilk adımını attı");
+            }
+
+        }
+
+        if (50 < gercekKordinatX && gercekKordinatX <= 100) {
+
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 100) {
+                System.out.println("50 ile 100 kordinatları arasında cöp adam ikinci adımını attı");
+            }
+        }
+
+        if (100 < gercekKordinatX && gercekKordinatX <= 150) {
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 150) {
+                System.out.println("100 ile 150 kordinatları arasında cöp adam üçüncü adımını attı");
+            }
+
+        }
+
+        if (150 < gercekKordinatX && gercekKordinatX <= 200) {
+
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 200) {
+                System.out.println("150 ile 200 kordinatları arasında cöp adam dördüncü adımını attı");
+            }
+        }
+        if (200 < gercekKordinatX && gercekKordinatX <= 250) {
+
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 250) {
+                System.out.println("200 ile 250 kordinatları arasında cöp adam beşinci adımını attı");
+            }
+
+        }
+        if (250 < gercekKordinatX && gercekKordinatX <= 300) {
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 300) {
+                System.out.println("250 ile 300 kordinatları arasında cöp adam altıncı adımını attı");
+            }
+        }
+        if (300 < gercekKordinatX && gercekKordinatX <= 350) {
+
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 350) {
+                System.out.println("350 ile 400 kordinatları arasında cöp adam yedinci adımını attı");
+            }
+
+        }
+        if (350 < gercekKordinatX && gercekKordinatX <= 400) {
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 400) {
+                System.out.println("450 ile 500 kordinatları arasında cöp adam sekizinci adımını attı");
+            }
+        }
+        if (400 < gercekKordinatX && gercekKordinatX <= 450) {
+
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 450) {
+                System.out.println("400 ile 450 kordinatları arasında cöp adam dokuzuncu adımını attı");
+            }
+
+        }
+        if (450 < gercekKordinatX && gercekKordinatX <= 500) {
+
+            copAdaminKollari1X2 -=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 += ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 -= ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 += ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 500) {
+                System.out.println("450 ile 500 kordinatları arasında cöp adam onuncu adımını attı");
+            }
+        }
+        if (500 < gercekKordinatX && gercekKordinatX <= 530) {
+            copAdaminKollari1X2 +=ayakKordinatiArtirmaX;
+            copAdaminKollari2X2 -= ayakKordinatiArtirmaX;
+
+            copAdaminAyaklari1X2 += ayakKordinatiArtirmaX;
+            copAdaminAyaklari2X2 -= ayakKordinatiArtirmaX;
+            gercekKordinatX++;
+
+            if (gercekKordinatX == 530) {
+                System.out.println("500 ile 530 kordinatları arasında cöp adam onbirinci adımını attı");
 
 
+            }
+
+        }
 
         repaint();
 
@@ -134,8 +301,8 @@ class CopAdam extends JPanel implements ActionListener {
 
 }
 
-
 public class Main extends JFrame {
+
 
     public Main() {
         initUI();
@@ -144,7 +311,7 @@ public class Main extends JFrame {
     public void initUI() {
         add(new CopAdam());
         setTitle("HAREKET EDEN ÇÖP ADAM");
-        setSize(900, 600);
+        setSize(600, 600);
         setVisible(true);
         setLocationRelativeTo(null);
         //  setResizable(false); // boyutlandırmayı kapatıyor
