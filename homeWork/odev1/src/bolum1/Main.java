@@ -49,7 +49,7 @@ class RastgeleCizgiler extends JPanel implements ActionListener {
 
             BasicStroke bs1 = new BasicStroke(k, BasicStroke.CAP_BUTT,
                     BasicStroke.JOIN_ROUND, 1.0f, dash1, 1.0f);
-            graphics2D.setColor(Color.GREEN);
+            graphics2D.setColor(Color.BLACK);
             graphics2D.setStroke(bs1);
 
             int x1 = (int) (Math.abs(random.nextInt()) % width);
@@ -57,8 +57,7 @@ class RastgeleCizgiler extends JPanel implements ActionListener {
             int x2 = (int) (Math.abs(random.nextInt()) % width);
             int y2 = (int) (Math.abs(random.nextInt()) % height);
 
-            graphics2D.drawLine(x1, y1, x2, y2);
-
+            graphics2D.drawLine(x1,y1,x2,y2);
         }
 
     }
@@ -93,7 +92,6 @@ public class Main extends JFrame {
             }
         });
 
-
         double height = 600;
         double width = 600;
 
@@ -103,8 +101,6 @@ public class Main extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-
-
     public static void main(String[] args) {
         Main main = new Main();
     }

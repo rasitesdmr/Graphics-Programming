@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2018f5f-8bd2-4994-95f2-caee8241f348" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homeWork/odev1/src/bolum1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeWork/odev1/src/bolum1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homeWork/out/production/homeWork/bolum1/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeWork/out/production/homeWork/bolum1/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homeWork/out/production/homeWork/bolum1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeWork/out/production/homeWork/bolum1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homeWork/out/production/homeWork/bolum1/RastgeleCizgiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeWork/out/production/homeWork/bolum1/RastgeleCizgiler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +34,21 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="classWork" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="classWork" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,6 +59,9 @@
       <updated>1665346278610</updated>
       <workItem from="1665346280048" duration="29000" />
       <workItem from="1665418488152" duration="24000" />
+      <workItem from="1665642875275" duration="25000" />
+      <workItem from="1665642934123" duration="26000" />
+      <workItem from="1665642981311" duration="1205000" />
     </task>
     <servers />
   </component>
