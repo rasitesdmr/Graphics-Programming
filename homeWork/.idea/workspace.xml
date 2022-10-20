@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ad45e7-6d5a-4ae6-a2cc-97ec09786ded" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2022_00_08_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2022_00_08__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/homeWork/bolum2/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork/bolum2/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/homeWork/bolum2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork/bolum2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/homeWork/bolum2/TurkBayragi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/homeWork/bolum2/TurkBayragi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/odev2/out/production/odev2/odev2_2/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odev2/out/production/odev2/odev2_2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odev2/out/production/odev2/odev2_2/Surface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odev2/out/production/odev2/odev2_3/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odev2/out/production/odev2/odev2_3/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odev2/out/production/odev2/odev2_3/Surface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork/bolum2/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork/bolum2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homeWork/bolum2/TurkBayragi.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +40,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/mrasi/Desktop/Graphics-Programming/homeWork",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mrasi/Desktop/Graphics-Programming/homeWork&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="bolum3" />
@@ -147,6 +149,7 @@
       <workItem from="1665642895417" duration="55000" />
       <workItem from="1665748724499" duration="8922000" />
       <workItem from="1666277968586" duration="58000" />
+      <workItem from="1666293504843" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1665602937128</created>
